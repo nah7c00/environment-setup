@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>My Environment Setup
+</title>
+<style>
+body {
+	color:#696969;
+}
+.code {
+	background:#EEE; 
+}
+code {
+	background:inherit;
+}
+</style>
+</head>
+<body>
+<h1>My Environment Setup</h1>
+Update
+<code>sudo apt-get update</code>
+Install Apache
+<code>sudo apt-get install apache2</code>
+Chech Apache config file systax
+<code>sudo apache2ctl configtest</code>
+Open Apache config file
+<code>sudo nano /etc/apache2/apache2.conf</code>
+Insert Server Name
+<code>ServerName localhost</code>
+Restart Apache
+<code>sudo systemctl restart apache2</code>
+Install MySQL Server
+<code>sudo apt-get install mysql-server</code>
+Install phpMyAdmin
+<code>sudo apt install phpmyadmin</code>
+<div>
+	cat .hidden
+	<div class="code">
+		<code>
+			Android<br>
+			AndroidStudioProjects<br>
+		</code>
+	</div>
+</div
+<div>
+	File: /etc/cron.daily/mysql_backup
+	<div class="code">
+		<code>
+			#!/bin/sh<br>
+			<br>
+			# daily run mysqldump for making database backup<br>
+			<br>
+			USER="yun"<br>
+			PASS="K?*2xYKD"<br>
+			DATABASES="electronic_components passwd phone_numbers"<br>
+			for DATABASE in ${DATABASES}<br>
+			do<br>
+			mysqldump --user=${USER} --password=${PASS} ${DATABASE} | gzip > /home/yun/data$<br>
+			done<br>
+		</code>
+	</div>
+</div>
+<div>
+	Mozila Firefox bookmarks restore
+</div>
+java -version
+sudo apt-get install default-jre
+sudo apt-get install default-jdk
+https://developer.android.com/studio/install.html
+sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
+sudo unzip android-studio-ide-141.2178183-linux.zip -d /opt
+cd /opt/android-studio/bin
+./studio.sh
+
+sudo apt-get install --no-install-recommends gnome-panel
+gnome-desktop-item-edit --create-new ~/Desktop
+</body>
+</html>
